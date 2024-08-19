@@ -1,0 +1,29 @@
+{
+    "recipes":[
+        {
+            "id": 1,
+            "name": "Recipe 1",
+            "ingredients": ["eggs", "butter","mushrooms"],
+            "instructions": ["Step 1", "Step 2"],
+            "servings": 4,
+            "cooking_time": 30,
+            "prep_time" : 10,
+            "category":"breakfast",
+            "image_url": "https://cdn.loveandlemons.com/wp-content/uploads/2023/03/omelette-recipe-580x803.jpg"
+
+        },
+        {
+            "id": 2,
+            "name": "Recipe 2",
+            "ingredients": ["eggs", "butter","mushrooms"],
+            "instructions": ["Step 1", "Step 2"],
+            "servings": 4,
+            "cooking_time": 30,
+            "prep_time" : 10,
+            "category":"breakfast",
+            "image_url": "https://cdn.loveandlemons.com/wp-content/uploads/2023/03/omelette-recipe-580x803.jpg"
+
+        }
+
+    ]
+}

@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.card-container{
+    border: solid rgb(197, 193, 193) 2px;
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+.recipe-counter{
+    display: flex;
+    gap: 16rem;
+    margin-left: 6rem;
+}
+h1{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+li{
+    margin-left: 1rem;
+}
+.ingredients-co{
+    margin-top: 3rem;
+    margin-left: 2rem;
+    border: solid rgb(180, 180, 180) 2px ;
+}
