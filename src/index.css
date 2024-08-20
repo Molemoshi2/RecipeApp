@@ -26,4 +26,18 @@ li{
     margin-top: 3rem;
     margin-left: 2rem;
     border: solid rgb(180, 180, 180) 2px ;
+    padding-bottom: 2rem;
+}
+/* styling the form where you add recipes */
+
+form{
+    padding: 3rem;
+}
+input{
+    width: 8rem;
+    height: 2rem;
+}
+.category-Container{
+    display: flex;
+    justify-content: space-evenly;
 }

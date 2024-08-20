@@ -23,8 +23,8 @@ function RecipeInfo(){
             <h1>Recipe details</h1>
             <div className="recipe-counter">
                 <div>
-                    <img width={400} src={recipe.image_url} alt="recipe image" />
                     <h2>{recipe.name}</h2>
+                    <img width={400} height={500} style={{marginTop:"1rem"}} src={recipe.image_url} alt="recipe image" />
                 </div>
                 <div>
                     <ul style={{display:"flex", listStyle:"none"}} >
@@ -36,10 +36,14 @@ function RecipeInfo(){
                     <div className="ingredients-co">
                         <h1>Ingredients</h1>
                         <p>{newArr && newArr.map((item)=>(
-                           <ol>
-                             <li ><h4>{item}</h4></li>
-                           </ol>
+                           
+                             <li style={{listStyle:"none"}}><h4>{item}</h4></li>
+                           
                         ))}</p>
+                        <h1>Instructions</h1>
+                        {recipe.instructions && recipe.instructions.map((intruction)=>(
+                            <li>{intruction}</li>
+                        ))}
 
                     </div>
 

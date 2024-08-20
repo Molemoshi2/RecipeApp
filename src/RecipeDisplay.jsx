@@ -1,7 +1,15 @@
 import { useEffect } from "react"
 import { Link } from "react-router-dom"
-import App from "./App"
+
+
 function Recipedisplay(props){
+
+
+
+    
+    const handleModal = ()=>{
+        
+    }
     // useEfect to invoke the function
     useEffect(()=>{
         props.getRecipes();
@@ -21,9 +29,12 @@ function Recipedisplay(props){
                     </div>
                 </div>
             ))}
-                
-
+            < div style={{border:"solid grey 2px"}}>
+                <h4>Add recipe</h4>
+                <button style={{fontSize:"3rem"}}>+</button>
             </div>
+            </div>
+            
         </div>
     );
 }

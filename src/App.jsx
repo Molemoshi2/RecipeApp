@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Recipedisplay from './RecipeDisplay.jsx'
 import RecipeInfo from './RecipeInfo.jsx'
 import { useState } from 'react'
+import AddRecipe from './AddRecipe.jsx'
 
 function App() {
   ///defining my global function to pass in props
@@ -21,6 +22,7 @@ function App() {
       const data = await res.json()
       console.log(data)
     }
+    // lets try to handle post requests
   // creating routers
   const router = createBrowserRouter([
     {
@@ -35,6 +37,10 @@ function App() {
     {
       path: 'RecipeInfo',
       element: <RecipeInfo />
+    },
+    {
+      path: 'AddRecipe',
+      element: <AddRecipe/>
     }
   ])
   
