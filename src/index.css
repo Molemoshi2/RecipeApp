@@ -7,8 +7,9 @@
     border: solid rgb(197, 193, 193) 2px;
     display: flex;
     padding: 2rem;
-    gap: 2rem;
+    justify-content: space-evenly;
     margin-top: 4rem;
+    align-items: center;
 }
 .recipe-counter{
     display: flex;
@@ -40,4 +41,9 @@ input{
 .category-Container{
     display: flex;
     justify-content: space-evenly;
+}
+.official-Add-BTN{
+    width: 40%;
+    height: 2rem;
+    box-shadow: 2px 2px 2px black;
 }
