@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { Link } from "react-router-dom"
-
+import Navigation from "./navigation";
 
 function Recipedisplay(props){
     
@@ -11,6 +11,7 @@ function Recipedisplay(props){
     )
     return(
         <div>
+            <Navigation/>
             <h1>Recipes</h1>
             <div className="card-container">
             {props.recipes.map((recipe)=>(
@@ -20,13 +21,13 @@ function Recipedisplay(props){
                         <h4>{recipe.name}</h4><br />
                         <p>{recipe.ingredients.toString()}</p><br />
                         <Link to={`/RecipeInfo?recipeId=${recipe.id}`}>Read more</Link><br /><br />
-                        <button onClick={()=>props.getRecipebyId(recipe.id)}>delete</button>
+                        <button className="login-btn" onClick={()=>props.getRecipebyId(recipe.id)}>delete</button>
                     </div>
                 </div>
             ))}
-            < div style={{border:"solid grey 2px",height:"4rem",boxShadow:"2px 2px 2px black"}}>
-                <h4>Add recipe</h4>
-                <Link to={'/AddRecipe'}><button style={{fontSize:"2rem"}} >+</button></Link>
+            < div style={{border:"solid rgb(73, 13, 53) 2px",height:"4rem",boxShadow:"2px 2px 2px black",padding:'1rem'}}>
+                <h4 style={{color:'rgb(11, 49, 11, 1)'}}>Add recipe</h4>
+                <Link to={'/AddRecipe'}><button style={{fontSize:"2rem",backgroundColor:'rgb(73, 13, 53)',color:'white',cursor:'pointer'}} >+</button></Link>
             </div>
             </div>
             

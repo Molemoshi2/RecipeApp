@@ -3,6 +3,8 @@ import Recipedisplay from './RecipeDisplay.jsx'
 import RecipeInfo from './RecipeInfo.jsx'
 import { useState } from 'react'
 import AddRecipe from './AddRecipe.jsx'
+import Registration from './Registration.jsx'
+import Login from './Login.jsx'
 
 function App() {
   ///defining my global function to pass in props
@@ -21,19 +23,20 @@ function App() {
       const res = await fetch(url,{
         method: 'DELETE',
       }
-      ).then(()=>{console.log("deleted")})
+      ).then(()=>{console.log("deleted") })
     }
     // lets try to handle post requests
   // creating routers
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Recipedisplay getRecipes={getRecipes} recipes={recipes} getRecipebyId={getRecipebyId}/>,
+      element: <Login/>,
       errorElement:<div>404 not found</div>
     },
     {
       path: '/Recipes',
       element: <Recipedisplay  getRecipes={getRecipes} recipes={recipes} getRecipebyId={getRecipebyId}/>,
+      errorElement:<div>404 not found</div>
     },
     {
       path: 'RecipeInfo',
@@ -42,6 +45,10 @@ function App() {
     {
       path: 'AddRecipe',
       element: <AddRecipe/>
+    },
+    {
+      path:'Registration',
+      element: <Registration/>
     }
   ])
   

@@ -36,5 +36,36 @@
       "category": "breakfast",
       "image_url": "https://cdn.loveandlemons.com/wp-content/uploads/2023/03/omelette-recipe-580x803.jpg"
     }
+  ],
+  "Users": [
+    {
+      "UserEmail": "shantelmolemoshi@gmail.com",
+      "UserPassword": "webdev.123"
+    },
+    {
+      "id": "761b",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "78b6",
+      "email": "lemoshang2000@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "be3a",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "2039",
+      "email": "shantelmolemoshi@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "fdb5",
+      "email": "",
+      "password": ""
+    }
   ]
 }
