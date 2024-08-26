@@ -7,6 +7,7 @@ function Registration(){
     const [password,setPassword] = useState('')
     const [ConfirmPassword, setConfirmPassword] = useState('')
     const [isactive,setActive] = useState(false)
+    const [errors,setErrors] = useState({email:email,password:password})
     const [userDetails,setUserDetails] = useState({email:email,password:password})
     const redirect = useNavigate()
 
@@ -26,25 +27,28 @@ function Registration(){
         //lets try form validation
         if (!email.includes('@') && email.trim()==''){
             setActive(true)
+            setErrors({...errors,email:'Invalid Email'})
             
          }
         else if(password.length<6 && password.trim()=='' ){
             setActive(true)
+            setErrors({...errors,password:'Password must be at least 6 characters long'})
         }
         else if(ConfirmPassword!==password){
             setActive(true)
+            setErrors({password:"passwords do not match",email:''})
         }
         else{
-        setUserDetails({email:email,password:password})
-        let url = 'http://localhost:3001/Users'
-        fetch(url,{
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(userDetails)
-        }).then(()=>{
-            console.log('user added');
-            redirect('/')
-        })
+            setUserDetails({email:email,password:password})
+            let url = 'http://localhost:3001/Users'
+            fetch(url,{
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(userDetails)
+            }).then(()=>{
+                console.log('user added');
+                redirect('/Recipes')
+            })
         }
         
     }
