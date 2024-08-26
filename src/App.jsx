@@ -9,6 +9,7 @@ import Login from './Login.jsx'
 function App() {
   ///defining my global function to pass in props
   const [recipes,setRecipes] = useState([])
+  const redirect = useNavigate()
     // a function to get the recipes
     const getRecipes = async () => {
         const url = "http://localhost:3001/recipes"
@@ -23,7 +24,11 @@ function App() {
       const res = await fetch(url,{
         method: 'DELETE',
       }
-      ).then(()=>{console.log("deleted") })
+      ).then(()=>{
+        alert('delete successful')
+  
+    
+    })
     }
     // lets try to handle post requests
   // creating routers
@@ -35,7 +40,7 @@ function App() {
     },
     {
       path: '/Recipes',
-      element: <Recipedisplay  getRecipes={getRecipes} recipes={recipes} getRecipebyId={getRecipebyId}/>,
+      element: <Recipedisplay setRecipes={setRecipes} getRecipes={getRecipes} recipes={recipes} getRecipebyId={getRecipebyId}/>,
       errorElement:<div>404 not found</div>
     },
     {

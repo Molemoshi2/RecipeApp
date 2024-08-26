@@ -2,17 +2,29 @@ import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import Navigation from "./navigation";
 
+
 function Recipedisplay(props){
+    //
     
     // useEfect to invoke the function
     useEffect(()=>{
         props.getRecipes();
     },[]
     )
+
+    // handle the search function
+    const handleSearch =(e)=>{
+        const searchedItem = e.target.value
+        console.log(searchedItem)
+        const searchResult =  props.recipes.filter((item)=> item.name.toLowerCase().includes(searchedItem.toLowerCase()));
+        props.setRecipes(searchResult)
+        
+    }
     return(
         <div>
             <Navigation/>
             <h1>Recipes</h1>
+            <input className="login-input" type="text" placeholder="search" onChange={handleSearch} />
             <div className="card-container">
             {props.recipes.map((recipe)=>(
                 <div key={recipe.id} className="card">

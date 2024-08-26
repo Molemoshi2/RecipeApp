@@ -46,7 +46,7 @@ function AddRecipe(){
                 body: JSON.stringify(newRecipe)
             }).then(()=>{
                 console.log("Recipe added");
-                redirect('/')
+                redirect('/Recipes')
             })
             
     }
