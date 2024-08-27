@@ -9,7 +9,6 @@ import Login from './Login.jsx'
 function App() {
   ///defining my global function to pass in props
   const [recipes,setRecipes] = useState([])
-  const redirect = useNavigate()
     // a function to get the recipes
     const getRecipes = async () => {
         const url = "http://localhost:3001/recipes"
@@ -25,7 +24,7 @@ function App() {
         method: 'DELETE',
       }
       ).then(()=>{
-        alert('delete successful')
+        alert('delete successful, please refresh page')
   
     
     })
